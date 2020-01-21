@@ -1,0 +1,6066 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : 118.190.47.6
+ Source Server Type    : SQL Server
+ Source Server Version : 10501600
+ Source Host           : 118.190.47.6:1433
+ Source Catalog        : HoriProductQuery
+ Source Schema         : dbo
+
+ Target Server Type    : SQL Server
+ Target Server Version : 10501600
+ File Encoding         : 65001
+
+ Date: 17/01/2020 12:49:39
+*/
+
+
+-- ----------------------------
+-- Table structure for AntiCodeInfo
+-- ----------------------------
+IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[dbo].[AntiCodeInfo]') AND type IN ('U'))
+	DROP TABLE [dbo].[AntiCodeInfo]
+GO
+
+CREATE TABLE [dbo].[AntiCodeInfo] (
+  [AntiCode] varchar(10) COLLATE Chinese_PRC_CI_AS DEFAULT ((0)) NOT NULL,
+  [CheckCode] varchar(10) COLLATE Chinese_PRC_CI_AS  NOT NULL,
+  [ProductType] varchar(3) COLLATE Chinese_PRC_CI_AS  NOT NULL,
+  [Status] varchar(2) COLLATE Chinese_PRC_CI_AS  NULL,
+  [QueryTimes] int  NULL,
+  [LastQueryDate] datetime  NULL,
+  [PrintingState] varchar(2) COLLATE Chinese_PRC_CI_AS DEFAULT ((0)) NULL
+)
+GO
+
+ALTER TABLE [dbo].[AntiCodeInfo] SET (LOCK_ESCALATION = TABLE)
+GO
+
+EXEC sp_addextendedproperty
+'MS_Description', N'0-为查询;1-已查询',
+'SCHEMA', N'dbo',
+'TABLE', N'AntiCodeInfo',
+'COLUMN', N'Status'
+GO
+
+EXEC sp_addextendedproperty
+'MS_Description', N'印刷状态(0-未印刷，1-已印刷)',
+'SCHEMA', N'dbo',
+'TABLE', N'AntiCodeInfo',
+'COLUMN', N'PrintingState'
+GO
+
+
+-- ----------------------------
+-- Records of AntiCodeInfo
+-- ----------------------------
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11125698', N'Aa421781', N'1', N'1', N'6', N'2020-01-16 17:03:27.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11136796', N'Ab314482', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11176250', N'Ab910440', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11244689', N'Ac567381', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11249188', N'Ac988530', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11252709', N'Ad822988', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11322991', N'Ae387362', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11327519', N'Ae597916', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11342394', N'Ae858625', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11426340', N'Af127675', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11438251', N'Af172567', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11479692', N'Af916718', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11486301', N'Ag138953', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11497096', N'Ag384893', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11507386', N'Ag557871', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11529955', N'Ag734726', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11559327', N'Ag844913', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11572936', N'Ah106188', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11731184', N'Ai213644', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11743464', N'Ai377532', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11760454', N'Ai712235', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11802165', N'Ai980756', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11866467', N'Aj180851', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11912152', N'Aj255812', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'11994303', N'Aj432542', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'12001336', N'Aj546641', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'12019709', N'Aj831414', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'12062844', N'Aj894004', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'12071445', N'Ak289675', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'12104387', N'Ak834911', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'12230632', N'Al445657', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'12315763', N'Al459362', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'12368566', N'Am176777', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'12379048', N'Am202094', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'12479573', N'Am577921', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'12500531', N'Am758304', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'12510394', N'Am847625', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'12571283', N'Ao155151', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'12629569', N'Ap182011', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'12666488', N'Ap899300', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'12689198', N'Aq327957', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'12764717', N'Aq500240', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'12778078', N'Ar138887', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'12786692', N'Ar226401', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'12913629', N'Ar470087', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'12950452', N'Ar875602', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'13006513', N'Ar892229', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'13043536', N'Ar897191', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'13149251', N'As253721', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'13156403', N'As347649', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'13182738', N'As574701', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'13232529', N'As955735', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'13398240', N'At118533', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'13399387', N'At153734', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'13448791', N'At172594', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'13492929', N'At307297', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'13512550', N'At439732', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'13549380', N'At473833', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'13637634', N'At696314', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'13651575', N'Av521335', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'13701540', N'Av695943', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'13729490', N'Av719332', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'13740755', N'Aw138778', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'13875491', N'Aw268530', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'13882931', N'Ax615251', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'13892083', N'Ax654428', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'13912460', N'Ax738981', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'14145618', N'Ax854089', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'14149188', N'Ay137254', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'14209937', N'Ay137549', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'14307243', N'Ay491297', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'14352284', N'Ay674209', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'14355769', N'Az276424', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'14496766', N'Az301506', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'14626188', N'Az775110', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'14639238', N'Ba915491', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'14651197', N'Bb103018', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'14656117', N'Bb420083', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'14665097', N'Bb603119', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'14682168', N'Bb603965', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'14706080', N'Bb672324', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'14860506', N'Bc662981', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'14896284', N'Bc918112', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'14951019', N'Bc920651', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15063112', N'Bd727333', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15151992', N'Bd800210', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15239171', N'Bd893603', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15261760', N'Bd947796', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15389964', N'Be120540', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15398656', N'Be179436', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15400748', N'Be557557', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15435787', N'Be731294', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15513718', N'Bf939769', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15520659', N'Bg695870', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15523116', N'Bg733964', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15526083', N'Bg784055', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15538772', N'Bh308492', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15598368', N'Bi648726', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15666354', N'Bj917316', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15681796', N'Bk201681', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15770912', N'Bk447348', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15776910', N'Bl436239', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15780616', N'Bm699006', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15794786', N'Bm727036', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15919950', N'Bm924950', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'15987845', N'Bn386512', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16041337', N'Bn644435', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16056303', N'Bn650402', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16099805', N'Bo442998', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16124243', N'Bo672587', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16126720', N'Bp316653', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16132982', N'Bp554161', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16152060', N'Bp571664', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16156942', N'Bq202496', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16169222', N'Bq915972', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16201427', N'Br379284', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16319004', N'Br770221', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16330893', N'Bs396888', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16335421', N'Bs682762', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16395289', N'Bs700696', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16450120', N'Bt335980', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16556817', N'Bt635345', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16557528', N'Bu183486', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16569425', N'Bu249740', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16573639', N'Bu946579', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16615252', N'Bv449418', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16667580', N'Bw895160', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16687457', N'Bx259139', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16695591', N'Bx495377', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16706332', N'By337695', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16735079', N'By567532', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16736372', N'Bz155210', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16754045', N'Ca323868', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16767173', N'Ca540760', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'16837934', N'Ca672891', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'17053923', N'Cb277006', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'17074522', N'Cb713476', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'17112598', N'Cb811849', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'17263234', N'Cc517560', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'17282248', N'Cc659623', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'17303022', N'Cc903441', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'17368595', N'Cd102801', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'17398514', N'Cd417058', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'17421884', N'Cd695190', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'17428980', N'Cd987281', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'17470204', N'Ce565210', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'17675772', N'Cf484707', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'17702825', N'Cf625377', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'17809097', N'Cg342507', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'17832610', N'Cg838733', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'17843726', N'Cg850743', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'17882853', N'Ch712281', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'17904532', N'Ch969678', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'18047158', N'Ci275840', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'18056363', N'Ci527678', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'18097644', N'Cj203993', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'18114562', N'Cj558561', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'18281090', N'Cj715762', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'18289763', N'Ck490503', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'18328224', N'Cl643494', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'18436929', N'Cm154491', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'18476155', N'Cm447001', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'18501362', N'Cn609510', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'18525322', N'Cn624018', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'18530405', N'Cn785524', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'18553615', N'Co733160', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'18574912', N'Co929784', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'18609491', N'Co998380', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'18613510', N'Cp203598', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'18816488', N'Cp435457', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'18935743', N'Cp565735', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'18942299', N'Cp610765', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'18949930', N'Cq183959', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'18987287', N'Cq311804', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19042696', N'Cq835778', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19069811', N'Cq954688', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19083283', N'Cr975286', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19149466', N'Cs153703', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19262449', N'Cs331242', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19308617', N'Cs777593', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19376742', N'Ct280550', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19415222', N'Ct390613', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19420706', N'Ct664637', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19481258', N'Cu450711', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19543485', N'Cu729550', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19567939', N'Cu856105', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19568065', N'Cu937022', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19569649', N'Cv166937', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19635082', N'Cv230022', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19658329', N'Cv410912', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19683860', N'Cv954927', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19687941', N'Cw505394', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19732377', N'Cw992438', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19757716', N'Cx195721', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19812532', N'Cx196304', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19824789', N'Cx446462', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19895257', N'Cx498953', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'19942258', N'Cy199199', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20018987', N'Cy773464', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20075209', N'Cy853479', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20083649', N'Cy880542', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20096065', N'Da182048', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20107313', N'Da899984', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20145632', N'Db478079', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20158658', N'Db602319', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20212166', N'Db847897', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20288058', N'Dc137753', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20362031', N'Dc551286', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20405768', N'Dc955599', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20421683', N'Dd563971', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20440710', N'Dd642565', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20482408', N'Dd712351', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20614652', N'Dd719647', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20638715', N'Dd845517', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20642439', N'De245824', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20645816', N'De354009', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20673812', N'De473254', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20759287', N'De533796', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20869793', N'De830837', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20892193', N'De833797', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20900492', N'Df198725', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20946818', N'Df296099', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'20982863', N'Df364828', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21018031', N'Df670283', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21071686', N'Dg154316', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21129854', N'Dg189282', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21200990', N'Dg506295', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21202768', N'Dh117175', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21220646', N'Dh179748', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21233682', N'Dh471929', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21302686', N'Dh578393', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21318942', N'Dh970286', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21427171', N'Di295342', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21428748', N'Dj335986', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21484406', N'Dj404369', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21563219', N'Dj685562', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21566447', N'Dj882873', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21594898', N'Dj968716', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21610059', N'Dj972333', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21632089', N'Dk186064', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21707123', N'Dk239933', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21723895', N'Dk717891', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21742316', N'Dl273358', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21752021', N'Dl318000', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21773423', N'Dl747455', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21879971', N'Dl846801', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'21897964', N'Dl880678', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'22053711', N'Dm596611', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'22149007', N'Dn751809', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'22204169', N'Dn945312', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'22208520', N'Do156069', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'22265609', N'Do309511', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'22394757', N'Do730961', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'22401671', N'Do881841', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'22526317', N'Dp437503', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'22588892', N'Dp442527', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'22594636', N'Dp604802', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'22616323', N'Dp885412', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'22650936', N'Dq314138', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'22716929', N'Dq645352', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'22718729', N'Dq857672', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'22750253', N'Dr299163', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'22848203', N'Dr508817', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23009686', N'Dr642230', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23013137', N'Ds604655', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23128491', N'Ds630938', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23136003', N'Ds782262', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23161266', N'Dt786598', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23238331', N'Du549015', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23256259', N'Du667422', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23326415', N'Du797836', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23333820', N'Du999029', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23355450', N'Dv509407', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23363669', N'Dw140972', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23498437', N'Dw203888', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23527777', N'Dw372426', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23545072', N'Dw672882', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23548732', N'Dw788819', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23551073', N'Dx182648', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23560327', N'Dx378629', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23580006', N'Dx574587', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23580753', N'Dx706264', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23683639', N'Dx715949', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23732191', N'Dx954955', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23842340', N'Dx975342', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23870852', N'Dy260702', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23876920', N'Dy980028', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23887394', N'Dz300321', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23896362', N'Dz635197', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23931486', N'Dz948136', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23963122', N'Dz983744', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'23991746', N'Ea207927', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24023511', N'Ea285976', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24034057', N'Ea476766', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24082684', N'Ea578486', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24087339', N'Eb600145', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24097590', N'Eb784486', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24153763', N'Eb786989', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24216241', N'Ec151002', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24238884', N'Ec486720', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24272391', N'Ed261253', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24272667', N'Ee228847', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24279308', N'Ee487633', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24296093', N'Ee766203', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24370744', N'Ef842550', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24398996', N'Ef913755', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24462440', N'Eg288342', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24472381', N'Eg471307', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24561304', N'Eg726470', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24564939', N'Eg741972', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24652205', N'Eg804904', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24686723', N'Eg830758', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24719230', N'Eh500141', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24831130', N'Eh704922', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24842659', N'Eh744163', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'24942128', N'Eh924844', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25020039', N'Eh988456', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25022055', N'Eh991088', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25035608', N'Ei159144', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25044354', N'Ei990058', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25069113', N'Ej330624', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25080150', N'Ej638231', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25105193', N'Ej912381', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25145424', N'Ek355340', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25149907', N'Ek613972', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25227756', N'Ek852434', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25235915', N'Ek946398', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25324065', N'El840866', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25374414', N'Em277735', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25379575', N'Em606652', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25395573', N'Em790468', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25435327', N'En432434', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25463135', N'En491217', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25465426', N'En608132', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25478675', N'En941061', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25524707', N'Eo319142', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25538507', N'Eo848130', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25623559', N'Ep257018', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25648469', N'Ep302691', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25721704', N'Ep478478', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25725381', N'Ep739860', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25748863', N'Ep824890', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25773262', N'Eq425050', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25815403', N'Eq745181', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25824468', N'Er671307', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25913339', N'Er861160', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25944123', N'Es337557', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25954240', N'Es562837', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25979833', N'Es768005', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'25992175', N'Es803705', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26039497', N'Es806191', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26064249', N'Et119471', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26070290', N'Et479209', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26073670', N'Et633834', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26095297', N'Et669581', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26128877', N'Et799484', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26241401', N'Et984957', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26456109', N'Eu928820', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26546849', N'Ev596653', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26626764', N'Ev626971', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26651140', N'Ev641949', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26669411', N'Ev966189', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26718480', N'Ev997726', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26747188', N'Ew172945', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26786679', N'Ew402450', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26793601', N'Ew813123', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26794728', N'Ex131385', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26828543', N'Ey127756', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26830164', N'Ey187321', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26848891', N'Ey303381', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26898412', N'Ey720043', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'26915155', N'Ez689074', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27052250', N'Ez926754', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27151347', N'Ez970189', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27201727', N'Fa225579', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27310884', N'Fa748116', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27330920', N'Fa772221', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27430897', N'Fa857845', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27443879', N'Fb248694', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27464173', N'Fc521921', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27489443', N'Fc611378', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27496194', N'Fc840221', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27501121', N'Fd567303', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27530515', N'Fd929823', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27553366', N'Ff280410', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27589845', N'Ff663972', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27629959', N'Ff894806', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27645050', N'Ff910393', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27674191', N'Ff996905', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27696379', N'Fg282203', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27749436', N'Fg422325', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27775783', N'Fg556525', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27782189', N'Fg694710', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27786221', N'Fg698547', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27803055', N'Fh995779', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27831221', N'Fi313085', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'27936511', N'Fi385148', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28041374', N'Fi464821', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28113992', N'Fi868285', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28138299', N'Fj515729', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28147092', N'Fj946048', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28150537', N'Fj974888', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28169792', N'Fk213115', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28177575', N'Fk258360', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28220024', N'Fk439658', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28248034', N'Fk739019', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28295055', N'Fl310187', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28305690', N'Fl417514', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28308071', N'Fl814006', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28347778', N'Fl828697', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28368076', N'Fm105853', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28445640', N'Fm372770', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28489567', N'Fm879616', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28546654', N'Fn236128', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28653855', N'Fn384390', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28729875', N'Fn560352', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28744228', N'Fo135134', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28831263', N'Fo326910', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28844774', N'Fo473936', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28872518', N'Fo674517', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28904746', N'Fo693798', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28932262', N'Fo950774', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28953646', N'Fp161143', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'28964236', N'Fp323444', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29069499', N'Fp849147', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29084362', N'Fq369127', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29102107', N'Fq454031', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29106206', N'Fq593114', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29118857', N'Fr250621', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29143592', N'Fr651857', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29143895', N'Fs394049', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29168159', N'Fs522063', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29194176', N'Ft229836', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29224729', N'Ft312731', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29244455', N'Fu107491', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29303185', N'Fu215327', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29345937', N'Fu265145', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29413838', N'Fu536888', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29433333', N'Fu575163', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29444356', N'Fv722130', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29457906', N'Fw151917', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29474119', N'Fw454441', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29487822', N'Fw607298', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29514889', N'Fx144918', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29522445', N'Fx302109', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29589219', N'Fx510625', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29594928', N'Fx915906', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29611832', N'Fy496402', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29615000', N'Fz310672', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29664211', N'Fz420827', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29672684', N'Fz792636', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29678840', N'Fz860429', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29685617', N'Ga433500', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29701614', N'Gb482945', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29768102', N'Gb831777', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29776522', N'Gb895906', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29900356', N'Gc961309', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'29914860', N'Gd295218', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30019273', N'Gd645171', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30060856', N'Gd929222', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30144870', N'Gd939168', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30169254', N'Ge921458', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30232631', N'Ge973138', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30309905', N'Gf919263', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30323624', N'Gf993915', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30355001', N'Gg181368', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30404651', N'Gg210657', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30437839', N'Gg472762', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30537862', N'Gh314035', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30579739', N'Gh349992', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30585378', N'Gh362544', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30589128', N'Gh373749', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30619321', N'Gh484658', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30643968', N'Gh636135', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30644055', N'Gh726520', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30668788', N'Gh976987', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30699144', N'Gi180854', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30740104', N'Gi873878', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30742856', N'Gj243655', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30782175', N'Gj379813', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30862243', N'Gj812325', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30888308', N'Gj857895', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30945459', N'Gk285422', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30957436', N'Gk318675', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'30980472', N'Gk419120', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31096661', N'Gk447427', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31099234', N'Gk733974', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31130048', N'Gk989289', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31173722', N'Gm269954', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31190368', N'Gm567995', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31196003', N'Gm619420', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31260486', N'Gm626006', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31273067', N'Gm687409', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31291216', N'Gm771206', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31348765', N'Gm995446', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31372996', N'Gn392517', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31376599', N'Gn654394', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31389673', N'Gn898242', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31407631', N'Go390767', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31475017', N'Go932621', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31587051', N'Gp114406', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31665700', N'Gp361449', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31749196', N'Gp452695', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31805524', N'Gp681798', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31808363', N'Gp718598', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31879300', N'Gp807390', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31889983', N'Gq183550', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31946945', N'Gq481598', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31951055', N'Gq782043', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31962065', N'Gr129898', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'31988283', N'Gr879509', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'32089296', N'Gs311810', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'32159157', N'Gs774984', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'32255387', N'Gs905412', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'32280619', N'Gt818333', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'32410023', N'Gt949088', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'32534407', N'Gu196268', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'32574242', N'Gu259282', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'32616929', N'Gu369459', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'32639004', N'Gu831357', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'32650254', N'Gu863249', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'32693412', N'Gu960893', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'32719743', N'Gv211237', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'32721284', N'Gv243316', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'32724669', N'Gv904419', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'32756460', N'Gw397656', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'32763242', N'Gw891997', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'32769699', N'Gx248145', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'32846799', N'Gx416868', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'32929267', N'Gx664615', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33045103', N'Gx954001', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33057479', N'Gy805927', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33062004', N'Gy826712', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33083384', N'Gy932201', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33139102', N'Gz164451', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33142387', N'Gz319676', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33144507', N'Gz595500', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33163875', N'Gz630276', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33249807', N'Ha207674', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33391110', N'Ha905534', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33414729', N'Hc172145', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33420501', N'Hc364693', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33451513', N'Hc406557', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33515113', N'Hc482526', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33610548', N'Hc744916', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33721892', N'Hd574825', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33736033', N'Hd727231', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33738520', N'Hd977205', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33813474', N'He221467', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33821135', N'He830583', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33823410', N'He965006', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33824289', N'He969485', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33832370', N'He991081', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33844924', N'Hf426536', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'33995782', N'Hf855826', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34032932', N'Hg427255', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34050136', N'Hg767485', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34124169', N'Hg918028', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34141157', N'Hh416297', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34205243', N'Hi183596', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34289667', N'Hi793032', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34302710', N'Hj244730', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34428386', N'Hj427775', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34448031', N'Hk124688', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34478957', N'Hk334899', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34569666', N'Hk484673', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34578926', N'Hk504641', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34582858', N'Hk817855', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34613430', N'Hk897120', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34627942', N'Hl232863', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34641279', N'Hl238954', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34860390', N'Hl397412', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34875811', N'Hl779799', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34884854', N'Hm145956', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34911242', N'Hm265682', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34941088', N'Hm416567', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34962349', N'Hm600165', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'34993030', N'Hm779733', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'35078977', N'Hm932433', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'35085803', N'Hn169873', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'35117738', N'Hn770232', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'35128542', N'Ho250531', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'35166744', N'Ho582769', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'35356476', N'Hp293792', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'35358260', N'Hp342250', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'35375229', N'Hp589407', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'35428738', N'Hp860307', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'35448449', N'Hq122806', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'35478343', N'Hq357331', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'35551769', N'Hq398419', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'35575589', N'Hq992738', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'35585805', N'Hq992930', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'35598453', N'Hr172405', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'35633876', N'Hr885922', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'35753442', N'Hs494049', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'35851439', N'Ht270908', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36092681', N'Ht334507', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36096100', N'Ht426098', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36182469', N'Ht635545', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36214080', N'Ht990631', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36252784', N'Hu145773', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36337493', N'Hu376527', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36397016', N'Hu709039', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36491449', N'Hu959190', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36541919', N'Hv600490', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36546022', N'Hv613527', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36567440', N'Hv862540', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36604008', N'Hw175445', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36606374', N'Hw279904', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36612851', N'Hw525072', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36614190', N'Hw550588', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36633670', N'Hw576997', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36715802', N'Hw647095', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36728178', N'Hw817993', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36786047', N'Hw867815', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36788656', N'Hx374784', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36855665', N'Hx643078', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36859161', N'Hy575552', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36870643', N'Hz138890', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36879944', N'Hz407443', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'36918731', N'Hz419220', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'37037589', N'Hz506528', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'37071563', N'Hz786553', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'37317509', N'Ia378041', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'37338134', N'Ia576358', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'37350671', N'Ia735321', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'37356944', N'Ia922994', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'37380095', N'Ib393220', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'37402692', N'Ib539576', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'37460870', N'Ic562460', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'37464666', N'Ic741834', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'37465978', N'Id304374', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'37550088', N'Id771154', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'37629399', N'Id828141', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'37741551', N'Ie355113', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'37742141', N'Ie756488', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'37819960', N'If517096', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'37906831', N'If528497', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'37924492', N'If975038', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38015945', N'Ig422945', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38061658', N'Ig502721', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38235855', N'Ig511235', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38246205', N'Ih714524', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38262116', N'Ih976920', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38347978', N'Ii141687', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38389355', N'Ii531958', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38392216', N'Ii613081', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38393493', N'Ii643801', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38400862', N'Ii656582', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38412118', N'Ii812532', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38429385', N'Ii880472', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38470823', N'Ij133344', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38487842', N'Ij745365', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38488909', N'Ij916412', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38551992', N'Ik624909', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38600240', N'Ik758675', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38643561', N'Ik884719', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38644253', N'Il255183', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38795214', N'Il403575', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38808144', N'Il602368', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38815740', N'In501765', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38825210', N'In501897', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38930258', N'In586891', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38935939', N'In735687', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38977617', N'Io177356', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'38994122', N'Io805822', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'39050474', N'Io867907', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'39111506', N'Ip199822', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'39255064', N'Ip863493', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'39392476', N'Ir904698', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'39434205', N'Ir927504', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'39446061', N'Is109107', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'39454769', N'Is502398', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'39562368', N'Is627870', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'39750385', N'Is783892', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'39792652', N'It421008', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'39893920', N'It442222', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'39921248', N'It446617', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'39930338', N'It450374', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'39936950', N'It529073', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'39963787', N'It650025', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'39990312', N'It833421', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'39991630', N'It944683', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40019178', N'Iu150358', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40051077', N'Iu510168', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40067966', N'Iu690239', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40088629', N'Iu713397', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40107908', N'Iv170772', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40139403', N'Iv740896', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40141300', N'Iv756275', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40191521', N'Iw527667', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40220231', N'Iw898198', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40254395', N'Ix365563', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40278184', N'Ix470363', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40299739', N'Ix737802', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40394892', N'Ix895296', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40433976', N'Iy410446', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40444948', N'Iy709023', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40498692', N'Iy779663', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40530663', N'Ja127104', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40559376', N'Ja440190', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40576299', N'Ja491204', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40590183', N'Ja784486', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40598992', N'Ja835556', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40657112', N'Ja879647', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40659677', N'Jb140932', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40750457', N'Jb916640', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40764196', N'Jb958842', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40805502', N'Jc410768', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40824096', N'Jd402820', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40910051', N'Je226053', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'40953644', N'Je442381', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41042121', N'Je913372', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41099412', N'Jf152060', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41245239', N'Jf180757', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41251130', N'Jf310640', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41300087', N'Jf370551', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41333644', N'Jf642495', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41421946', N'Jg295067', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41610865', N'Jg509295', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41645304', N'Jg744487', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41665689', N'Jh186821', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41666011', N'Jh188193', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41687949', N'Jh229487', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41707969', N'Jh405159', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41722292', N'Jh672677', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41758210', N'Ji551831', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41764529', N'Ji610453', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41777128', N'Ji873566', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41816926', N'Jj280123', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41909202', N'Jj330662', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41912829', N'Jj538153', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41973514', N'Jj881986', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41984628', N'Jk755985', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41986584', N'Jl374858', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41988408', N'Jl465658', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41989433', N'Jl770812', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41994251', N'Jl828755', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41995925', N'Jl890160', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'41997690', N'Jl994105', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42048595', N'Jm221042', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42058223', N'Jm557978', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42150730', N'Jo517668', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42187201', N'Jp423303', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42209906', N'Jp436840', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42220581', N'Jp471779', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42373619', N'Jp815884', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42419886', N'Jq401211', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42445937', N'Jq579477', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42470702', N'Jq825938', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42508066', N'Jr551704', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42552781', N'Js599416', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42576498', N'Jt256049', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42584740', N'Jt360468', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42616422', N'Jt502887', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42642166', N'Jt694271', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42670193', N'Ju718582', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42675522', N'Ju885934', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42722698', N'Ju971079', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42723714', N'Ju997854', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42950652', N'Jv895479', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'42992609', N'Jv935677', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43004430', N'Jw620017', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43068347', N'Jx106700', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43084078', N'Jx223537', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43105030', N'Jy351578', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43271313', N'Jy534926', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43336617', N'Jz209060', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43352429', N'Jz570780', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43357524', N'Jz750209', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43489297', N'Jz818087', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43514462', N'Ka551038', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43625205', N'Ka969891', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43682099', N'Kb830256', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43697252', N'Kb917053', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43744399', N'Kd536291', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43808749', N'Kd548138', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43861602', N'Kd745347', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43871525', N'Ke419663', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43875125', N'Ke495678', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43881784', N'Ke585566', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43931986', N'Ke951920', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43965560', N'Kf243423', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'43986777', N'Kf306057', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44021035', N'Kf591458', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44023959', N'Kf803290', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44031476', N'Kf864039', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44031957', N'Kg164764', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44078559', N'Kg234166', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44089872', N'Kg321974', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44120643', N'Kg676455', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44152964', N'Kg681528', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44243277', N'Kg780374', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44275944', N'Kg780945', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44341327', N'Kh139631', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44380284', N'Kh389329', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44409819', N'Kh632093', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44524413', N'Kh935041', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44587253', N'Ki595837', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44627962', N'Kj278113', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44632938', N'Kj426030', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44692943', N'Kj789978', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44711189', N'Kk636313', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44764593', N'Kk798664', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44775484', N'Kl171802', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44850568', N'Kl187907', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44899764', N'Kl330427', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44923594', N'Kl530856', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44956565', N'Kl574969', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'44987727', N'Kl844600', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'45020361', N'Kl973109', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'45103857', N'Km164121', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'45265583', N'Km276839', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'45266625', N'Km650194', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'45320434', N'Km841372', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'45328605', N'Kn158290', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'45457825', N'Kn554774', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'45465542', N'Kn666606', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'45493913', N'Ko322343', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'45532420', N'Ko410131', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'45718159', N'Ko800029', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'45770276', N'Kp275635', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'45805335', N'Kp614025', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'45836417', N'Kp974917', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'45907524', N'Kq193546', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'46012891', N'Kq415643', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'46027868', N'Kq616270', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'46056612', N'Kq693869', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'46058231', N'Kq762936', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'46124616', N'Kr283147', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'46192827', N'Kr294988', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'46392949', N'Kr787809', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'46425461', N'Ks216151', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'46532000', N'Ks391739', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'46603044', N'Ks741228', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'46605638', N'Ks786258', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'46705633', N'Kt335666', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'46738034', N'Kt503080', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'46876850', N'Ku355788', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'46890513', N'Ku422971', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'46906602', N'Ku509836', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'46954922', N'Ku524863', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'46958355', N'Ku575388', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'47034116', N'Ku718580', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'47055584', N'Ku866407', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'47107271', N'Kv651927', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'47166712', N'Kv755802', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'47217119', N'Kx563836', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'47217948', N'Kx675276', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'47293671', N'La224273', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'47304051', N'Lb113114', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'47307621', N'Lb207937', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'47321302', N'Lb350437', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'47454908', N'Lb848486', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'47509641', N'Lb914026', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'47523952', N'Lb973633', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'47681904', N'Lc164572', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'47721683', N'Lc181830', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'47793923', N'Lc206203', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'47958348', N'Lc229587', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'47968444', N'Lc370652', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'47977195', N'Lc580783', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48000829', N'Lc715297', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48060549', N'Lc907077', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48078626', N'Ld468340', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48138388', N'Ld856885', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48166163', N'Le125903', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48174533', N'Le219839', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48299823', N'Le293812', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48303524', N'Le301845', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48350634', N'Le319664', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48386691', N'Le990644', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48391834', N'Lf472217', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48464622', N'Lf480884', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48464665', N'Lf552184', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48493486', N'Lg946988', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48502735', N'Lg951961', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48516075', N'Lg954646', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48584488', N'Lh113737', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48590606', N'Lh708269', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48797473', N'Li381755', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48878547', N'Li581936', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48884894', N'Li747487', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'48993194', N'Lj436770', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'49132759', N'Lj996595', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'49203703', N'Lk155431', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'49206636', N'Lk250166', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'49226688', N'Lk318142', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'49259106', N'Lk342893', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'49368723', N'Lk724214', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'49469285', N'Ll349873', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'49543333', N'Lm589661', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'49564077', N'Lm722809', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'49569319', N'Ln294444', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'49594030', N'Lo891311', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'49598635', N'Lp391568', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'49600330', N'Lp415721', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'49670175', N'Lp657753', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'49699187', N'Lq185733', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'49715048', N'Lq475213', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'49747077', N'Lq618827', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'49780923', N'Lr124715', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'49803551', N'Lr333545', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'49840121', N'Lr479426', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'50104893', N'Lr543614', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'50111984', N'Lr943907', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'50118631', N'Ls330695', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'50146200', N'Ls488151', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'50209213', N'Ls815269', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'50212770', N'Lt282234', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'50258189', N'Lt306384', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'50320805', N'Lt625860', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'50456803', N'Lt955054', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'50484222', N'Lt992802', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'50542348', N'Lu738316', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'50579745', N'Lu835466', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'50703307', N'Lv461808', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'50710877', N'Lv628627', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'50778043', N'Lw246543', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'50783509', N'Lw676166', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'50805292', N'Lw836122', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'50828058', N'Lx291392', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'50832052', N'Ly148101', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'50927993', N'Ly450146', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'51037734', N'Ly507722', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'51156231', N'Ly605838', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'51314899', N'Ly657398', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'51328527', N'Lz101320', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'51353311', N'Lz344293', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'51449069', N'Lz914152', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'51485808', N'Ma539713', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'51486726', N'Ma631337', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'51508542', N'Ma681765', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'51598914', N'Ma867668', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'51625382', N'Ma976324', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'51725325', N'Mc289598', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'51823776', N'Mc414037', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'51914449', N'Mc545062', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'51926622', N'Mc865842', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'51942844', N'Mc973984', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52040676', N'Md123077', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52083534', N'Md145029', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52085791', N'Md440094', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52126998', N'Md780433', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52129938', N'Me305971', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52136696', N'Me790499', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52147765', N'Me846522', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52170084', N'Me935043', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52222973', N'Me936758', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52223335', N'Mf605083', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52246106', N'Mf715070', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52257424', N'Mf945651', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52412203', N'Mg274317', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52452771', N'Mg685440', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52607022', N'Mg725960', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52659087', N'Mh263696', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52744034', N'Mi112843', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52745335', N'Mi137495', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52763169', N'Mi230464', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52957238', N'Mi587509', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52958692', N'Mj178764', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52970524', N'Mj244613', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'52980127', N'Mj484766', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'53024551', N'Mj520956', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'53052020', N'Mj637968', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'53250840', N'Mj890656', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'53296233', N'Mk102056', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'53356802', N'Mk124386', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'53364238', N'Mk253060', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'53376418', N'Mk560233', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'53461904', N'Mk716942', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'53507881', N'Mk818285', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'53532646', N'Ml235218', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'53597904', N'Ml311241', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'53639729', N'Ml365905', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'53659362', N'Ml461362', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'53712865', N'Ml476482', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'53731246', N'Ml960079', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'53738272', N'Mm882625', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'53764219', N'Mm934245', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'53951683', N'Mm979806', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'53982985', N'Mn457790', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'53989127', N'Mn545212', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'53998767', N'Mn861169', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54001597', N'Mn928679', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54005652', N'Mo417681', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54010192', N'Mo468224', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54017045', N'Mo785794', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54033444', N'Mo846661', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54074445', N'Mp802313', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54095037', N'Mp838683', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54106660', N'Mq207809', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54142342', N'Mq341708', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54159626', N'Mq599429', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54178800', N'Mq745386', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54269420', N'Mq897461', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54310021', N'Mr430010', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54317417', N'Mr580016', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54375148', N'Mr899437', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54379114', N'Ms364181', N'1', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54500847', N'Ms421851', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54615914', N'Ms658246', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54687191', N'Mt317514', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54750727', N'Mt398711', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54776968', N'Mt451183', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'54982379', N'Mt678755', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55041123', N'Mu225344', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55119082', N'Mv285702', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55174751', N'Mv615032', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55229179', N'Mv675738', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55250507', N'Mv905035', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55254398', N'Mw306205', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55302605', N'Mw627586', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55406752', N'Mx399596', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55417274', N'Mx473076', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55487885', N'Mx519177', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55494586', N'My209848', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55509489', N'My337741', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55627539', N'My616588', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55644778', N'My774506', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55664390', N'My828325', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55672117', N'Mz513821', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55687536', N'Na254974', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55729662', N'Na764755', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55748243', N'Nb172171', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55773089', N'Nb245018', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55794883', N'Nb823961', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55813111', N'Nc142859', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55823207', N'Nc444390', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55837791', N'Nd307212', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55841949', N'Nd338225', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55958225', N'Nd497064', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55968459', N'Ne225521', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'55999963', N'Ne694496', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56044468', N'Nf694495', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56080523', N'Nf772413', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56084804', N'Ng250244', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56092958', N'Ng756196', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56099488', N'Ng839990', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56136538', N'Nh187380', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56204044', N'Nh358500', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56278875', N'Ni118195', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56288833', N'Ni514491', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56300430', N'Ni591482', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56365522', N'Ni719462', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56401413', N'Ni931960', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56458649', N'Nj431578', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56530547', N'Nj699701', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56538899', N'Nj729209', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56638307', N'Nk205249', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56642727', N'Nk389999', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56673812', N'Nl139809', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56708182', N'Nl420301', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56721780', N'Nm429410', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56791043', N'Nm703847', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56817988', N'Nm821467', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56835176', N'Nm951265', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56864877', N'Nm973804', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56885934', N'Nm981756', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'56904692', N'Nn391404', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57031443', N'Nn857427', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57035734', N'No661609', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57069179', N'No718962', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57083055', N'Np568589', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57087144', N'Np671184', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57164851', N'Np822711', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57168648', N'Nq183917', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57265563', N'Nq860661', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57289422', N'Nr105260', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57301882', N'Nr550067', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57379871', N'Nr646145', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57392582', N'Ns179335', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57452341', N'Ns629122', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57468061', N'Ns839446', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57509290', N'Nt148198', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57560692', N'Nt646044', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57560884', N'Nt972617', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57566998', N'Nu441506', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57570297', N'Nv105549', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57572885', N'Nv451908', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57577988', N'Nv596395', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57586037', N'Nv756171', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57594247', N'Nv762046', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57657019', N'Nv853135', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57707092', N'Nv870344', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57763809', N'Nv891439', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57802884', N'Nw407048', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57834315', N'Nw920683', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57873178', N'Nw942148', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57912502', N'Nx420918', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57918869', N'Ny210846', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57919485', N'Ny412634', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57933681', N'Ny955830', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57944966', N'Nz168141', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57963648', N'Nz391413', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57969287', N'Nz955895', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'57994645', N'Oa211116', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58043746', N'Oa665854', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58098940', N'Ob530088', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58140976', N'Ob576879', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58190413', N'Ob921256', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58196573', N'Oc953868', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58201208', N'Oc988859', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58204531', N'Od111521', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58217911', N'Od582437', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58220927', N'Oe250695', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58316570', N'Oe406892', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58321184', N'Oe409078', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58378026', N'Oe573833', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58405136', N'Of667027', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58421993', N'Of884178', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58451044', N'Of959957', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58458762', N'Of997547', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58588849', N'Og101121', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58621619', N'Og119761', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58706962', N'Og782110', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58756333', N'Oh188538', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58799483', N'Oh189643', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58812454', N'Oh270389', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58901664', N'Oh708640', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58905333', N'Oh767341', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58965178', N'Oh784894', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58968314', N'Oh895221', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'58986093', N'Oi669577', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'59008893', N'Oi690864', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'59085456', N'Oi849193', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'59091975', N'Oj343846', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'59101792', N'Oj853325', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'59175356', N'Ok471533', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'59181814', N'Ok547790', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'59193935', N'Ok568058', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'59527919', N'Ok991519', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'59571995', N'Ol808219', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'59633403', N'Ol865287', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'59759061', N'Om197600', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'59801246', N'On224954', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'59843960', N'On512968', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'59917639', N'Oo266492', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'59992541', N'Oo440247', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'60157621', N'Oo453871', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'60178631', N'Oo729858', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'60186263', N'Op162369', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'60220014', N'Op480949', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'60346001', N'Op797409', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'60413510', N'Oq318601', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'60453172', N'Oq781911', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'60472941', N'Or208212', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'60504016', N'Or257373', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'60600185', N'Or862112', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'60681477', N'Os975186', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'60716076', N'Ot118410', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'60730722', N'Ot207374', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'60792505', N'Ot480554', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'60818637', N'Ot705986', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'60898135', N'Ot774335', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'60932837', N'Ot979194', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'60979724', N'Ou342728', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'61063780', N'Ou406077', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'61073474', N'Ou487223', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'61178035', N'Ou662322', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'61201871', N'Ov306250', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'61204607', N'Ov640748', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'61272535', N'Ow556717', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'61403304', N'Ow601813', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'61489212', N'Ox447187', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'61557101', N'Ox488252', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'61604507', N'Ox954769', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'61624246', N'Oy337101', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'61722446', N'Oy591610', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'61804429', N'Oy731321', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'61830269', N'Oz518756', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'61870356', N'Oz614864', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'61882131', N'Oz910891', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'61903747', N'Pa568494', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'61906908', N'Pa570313', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'61923705', N'Pb551641', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'61925158', N'Pb703976', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'61971499', N'Pb849034', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62085771', N'Pc117507', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62113318', N'Pc530464', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62168721', N'Pc617559', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62197699', N'Pd228791', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62234809', N'Pe983657', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62274064', N'Pf648800', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62374175', N'Pg360910', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62449042', N'Pg447893', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62459102', N'Pg746082', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62475400', N'Pg822795', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62500311', N'Ph131930', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62566132', N'Ph476749', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62593459', N'Ph600677', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62603850', N'Ph602916', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62706207', N'Ph862097', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62721214', N'Pi330755', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62722074', N'Pi469989', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62844539', N'Pj595765', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62856456', N'Pj845628', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62865907', N'Pk308936', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62912629', N'Pk722099', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62982846', N'Pk758688', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'62983497', N'Pk773348', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'63111174', N'Pl313157', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'63118825', N'Pl633141', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'63195122', N'Pl777051', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'63286962', N'Pl804795', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'63294736', N'Pm508751', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'63309635', N'Pn335705', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'63317941', N'Pn757715', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'63348210', N'Pn813500', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'63382874', N'Po479504', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'63479924', N'Po663322', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'63495251', N'Pp154425', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'63498401', N'Pp169345', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'63609280', N'Pp457502', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'63683028', N'Pp870938', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'63854776', N'Pp989848', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'63943875', N'Pq351593', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'64007827', N'Pq654330', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'64050431', N'Pq981448', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'64055567', N'Pr829473', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'64077202', N'Pr901495', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'64112884', N'Ps182143', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'64124576', N'Ps474196', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'64189414', N'Ps649828', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'64475514', N'Ps755260', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'64478711', N'Pt697555', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'64528566', N'Pt716395', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'64615450', N'Pv191301', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'64725573', N'Pv379514', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'64792538', N'Pv639658', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'64805742', N'Pv979754', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'64829965', N'Pw222314', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'64855863', N'Pw242690', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'64897160', N'Pw618137', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'64939523', N'Pw869858', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'64976495', N'Pw907091', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'64989979', N'Px195469', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65027329', N'Py670434', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65035315', N'Pz185297', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65106265', N'Pz278771', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65239160', N'Pz532509', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65251556', N'Pz541938', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65269416', N'Qa366063', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65355596', N'Qa534642', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65403953', N'Qa583587', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65415005', N'Qa591063', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65433817', N'Qa660035', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65441405', N'Qa814080', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65449886', N'Qb711524', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65465096', N'Qb926480', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65539906', N'Qc340696', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65629150', N'Qc560722', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65639840', N'Qc620955', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65648898', N'Qc891708', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65701246', N'Qe166913', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65726435', N'Qf310308', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65739763', N'Qf523491', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65747550', N'Qf670564', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65809455', N'Qf814903', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65863138', N'Qf967795', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'65956016', N'Qh326707', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'66006070', N'Qh446565', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'66052447', N'Qh603668', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'66166947', N'Qi199211', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'66364273', N'Qi273720', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'66376222', N'Qi294925', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'66418064', N'Qi858221', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'66437093', N'Qj259774', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'66479748', N'Qj658811', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'66501186', N'Qj693046', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'66582728', N'Qj855261', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'66650972', N'Qk300214', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'66691419', N'Qk991420', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'66703299', N'Ql284909', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'66706845', N'Ql458350', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'66743282', N'Qm600558', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'66782204', N'Qm697289', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'66823693', N'Qn344122', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'66843553', N'Qn920870', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'66903783', N'Qo791337', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'66931478', N'Qo965237', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'67013269', N'Qp616051', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'67037415', N'Qp763577', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'67080318', N'Qp961835', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'67082155', N'Qp988217', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'67263657', N'Qq257323', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'67282867', N'Qq961842', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'67307420', N'Qr571559', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'67339237', N'Qr855233', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'67360002', N'Qs158121', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'67373722', N'Qs184598', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'67415404', N'Qs210243', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'67417952', N'Qs595803', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'67430984', N'Qs685029', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'67523808', N'Qs918689', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'67743052', N'Qt647829', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'67777157', N'Qt698066', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'67804303', N'Qt707180', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'67875433', N'Qt761684', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'67950854', N'Qu191639', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68024434', N'Qu398727', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68110501', N'Qu585032', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68160075', N'Qu941397', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68165051', N'Qv423450', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68171423', N'Qv628119', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68180775', N'Qv701234', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68203915', N'Qw551093', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68252817', N'Qw875552', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68299947', N'Qx498811', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68374549', N'Qx790428', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68377191', N'Qx998129', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68422501', N'Qy341054', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68434638', N'Qy946832', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68441096', N'Qz129405', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68507037', N'Qz131545', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68515234', N'Qz346003', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68562265', N'Ra230537', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68610353', N'Ra394142', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68613450', N'Ra691071', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68685059', N'Ra691627', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68742868', N'Ra871537', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68755723', N'Rb191997', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68870304', N'Rb268195', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68961430', N'Rb476336', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'68968876', N'Rb528977', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69114937', N'Rc915586', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69213621', N'Re191998', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69218537', N'Rf115917', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69226582', N'Rf121829', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69227073', N'Rf221105', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69235874', N'Rg108390', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69242696', N'Rg478114', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69264351', N'Rh237449', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69287651', N'Rh265568', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69310584', N'Rh309345', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69384081', N'Rh477659', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69459600', N'Rh954162', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69493120', N'Ri424156', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69523699', N'Ri550900', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69524810', N'Ri726273', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69564863', N'Ri758435', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69598905', N'Rj279523', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69663114', N'Rj482250', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69669920', N'Rj576103', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69684761', N'Rj740418', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69818612', N'Rk143146', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69839066', N'Rk578690', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69872524', N'Rk747693', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69890550', N'Rl302033', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'69956392', N'Rl438710', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'70073367', N'Rl546207', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'70118176', N'Rl630457', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'70167630', N'Rl932323', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'70170661', N'Rm686056', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'70249361', N'Rm833645', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'70256613', N'Rm921214', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'70335573', N'Rn430883', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'70345892', N'Rn551416', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'70497041', N'Rn722389', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'70623609', N'Rn748005', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'70718515', N'Rn965759', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'70721586', N'Ro211194', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'70735872', N'Ro422842', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'70760410', N'Ro425692', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'70792268', N'Ro776370', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'70798480', N'Ro979289', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'70833078', N'Rp401785', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'70834917', N'Rp433537', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'70892359', N'Rp810491', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'70937068', N'Rp955739', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71016817', N'Rq656028', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71028162', N'Rq791086', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71036120', N'Rr268927', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71047803', N'Rr454438', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71077826', N'Rr600367', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71087997', N'Rr704211', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71112920', N'Rr985068', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71170061', N'Rs471828', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71222972', N'Rs722743', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71227832', N'Rs778291', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71326931', N'Rs830973', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71341047', N'Rt534469', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71378494', N'Rt687203', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71444093', N'Rt694272', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71499415', N'Ru213577', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71515917', N'Ru741022', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71637671', N'Ru817410', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71692358', N'Ru889623', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71700969', N'Rv250411', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71709243', N'Rv295310', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71713114', N'Rv899031', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71755116', N'Rw505910', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71798166', N'Rx145876', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71838244', N'Rx492433', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71909912', N'Rz349630', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71911108', N'Sa590254', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71946641', N'Sa685522', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'71956551', N'Sa765458', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'72062494', N'Sb778571', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'72159606', N'Sb830605', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'72175843', N'Sc796398', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'72201326', N'Sc803717', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'72223089', N'Sd721556', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'72227672', N'Se452950', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'72262985', N'Se498430', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'72304730', N'Se531776', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'72352215', N'Sf571781', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'72364580', N'Sf628450', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'72373431', N'Sg374939', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'72410849', N'Sh306555', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'72444519', N'Sh419828', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'72525156', N'Sh949366', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'72627700', N'Sh973655', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'72673405', N'Si263259', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'72750816', N'Si644958', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'72778339', N'Sj170280', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'72909396', N'Sj409437', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'72966267', N'Sj718445', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'73033429', N'Sj726826', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'73092027', N'Sj981496', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'73122668', N'Sl195023', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'73151238', N'Sl567796', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'73170980', N'Sl569219', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'73251700', N'Sm256806', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'73359295', N'Sm284242', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'73419401', N'Sm449606', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'73467017', N'Sn134844', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'73551298', N'Sn175435', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'73657510', N'Sn387026', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'73663555', N'Sn788236', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'73667537', N'Sn934746', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'73677326', N'So150706', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'73707048', N'So251435', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'73721046', N'So526529', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'73859460', N'So633816', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'73861088', N'So717038', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'73895202', N'So748999', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'73897026', N'So882670', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'73956941', N'Sp116592', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'74006303', N'Sp309236', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'74075500', N'Sp544413', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'74157815', N'Sp954275', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'74243221', N'Sp992053', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'74258630', N'Sq806837', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'74328624', N'Sr119204', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'74333041', N'Sr144766', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'74351948', N'Sr531954', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'74409276', N'Sr647844', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'74529244', N'Ss218163', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'74576296', N'St307421', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'74592765', N'St349536', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'74615388', N'St423930', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'74723494', N'St703439', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'74912623', N'St858303', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'74950176', N'Sv195051', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'74975596', N'Sv236310', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'75048060', N'Sv314741', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'75087330', N'Sw239605', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'75121581', N'Sw430400', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'75173452', N'Sw662568', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'75337178', N'Sx236761', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'75349481', N'Sx519740', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'75367332', N'Sx960737', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'75490807', N'Sy243621', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'75518947', N'Sy315152', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'75546429', N'Sy572285', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'75610453', N'Sy587537', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'75635691', N'Sy809162', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'75685272', N'Sy860000', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'75727842', N'Sy995000', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'75751868', N'Sz400330', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'75810023', N'Sz548239', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'75929056', N'Sz847461', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'75981288', N'Sz926155', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'76012331', N'Ta262020', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'76052902', N'Ta571986', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'76064110', N'Tb335159', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'76224614', N'Tb678029', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'76241367', N'Tc396922', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'76265278', N'Tc413905', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'76307338', N'Tc764014', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'76312737', N'Tc779563', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'76395663', N'Td386389', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'76403998', N'Td494938', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'76423559', N'Td887566', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'76438939', N'Te437352', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'76636331', N'Te735923', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'76656573', N'Tf357730', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'76717566', N'Tg351347', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'76782779', N'Tg482946', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'76794700', N'Tg660152', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'76820050', N'Tg735499', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'76878684', N'Th111165', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'76991846', N'Th120466', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'76994079', N'Th139762', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'77085430', N'Th479515', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'77178417', N'Th565016', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'77192333', N'Ti138193', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'77264285', N'Tj138938', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'77319993', N'Tj158935', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'77350583', N'Tj363735', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'77432847', N'Tj716280', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'77481921', N'Tj784121', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'77556166', N'Tj823588', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'77575537', N'Tj877562', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'77603457', N'Tk126479', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'77744063', N'Tk691240', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'77745167', N'Tl119799', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'77769027', N'Tl805550', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'77797039', N'Tl816563', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'77839525', N'Tm443893', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'77869315', N'Tm573670', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'77937717', N'Tn235204', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'78016145', N'Tn283283', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'78138944', N'Tn764440', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'78141903', N'Tn970494', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'78343938', N'Tn985725', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'78346398', N'To318632', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'78408658', N'To324634', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'78500552', N'To459481', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'78542433', N'To600764', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'78634821', N'To974957', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'78646647', N'To997948', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'78664989', N'To999441', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'78728994', N'Tp474943', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'78737935', N'Tp477254', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'78787121', N'Tp559240', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'78797656', N'Tq307554', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'78830542', N'Tq393131', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'78830606', N'Tq865006', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'78837388', N'Tr158167', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'78977571', N'Tr169043', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79042611', N'Tr235030', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79111739', N'Tr236825', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79112229', N'Tr344466', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79157046', N'Tr496181', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79220928', N'Tr573948', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79222330', N'Tr700932', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79260174', N'Ts107556', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79381406', N'Ts140788', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79473050', N'Ts144599', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79513191', N'Ts296153', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79547982', N'Ts343889', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79551502', N'Ts472848', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79560813', N'Ts559942', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79664481', N'Ts802608', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79717250', N'Tt238946', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79743009', N'Tt289945', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79789723', N'Tt650480', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79794101', N'Tv634224', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79812228', N'Tv648629', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79933823', N'Tv663107', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79969191', N'Tw239918', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79980074', N'Tw769571', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'79999080', N'Tw830060', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80034034', N'Tw977824', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80249181', N'Tx126654', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80295505', N'Tx317519', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80339091', N'Tx912833', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80362134', N'Ty562259', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80407492', N'Ty741989', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80422074', N'Tz172160', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80444280', N'Tz175190', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80461429', N'Tz301301', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80465868', N'Tz452425', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80471496', N'Ua382927', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80475811', N'Ub278533', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80476995', N'Ub465335', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80491096', N'Ub818588', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80532622', N'Uc493804', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80579140', N'Uc627277', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80580226', N'Uc780935', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80614674', N'Uc847268', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80679644', N'Ud302608', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80693353', N'Ud583364', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80725368', N'Ud672056', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80778247', N'Ue383664', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80798388', N'Ue793021', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80819842', N'Uf583777', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80850341', N'Uf637599', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80882036', N'Uf758482', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80899126', N'Uf885476', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80968635', N'Uh217444', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80977803', N'Uh305479', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'80985062', N'Uh482455', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'81021296', N'Uh525882', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'81050286', N'Uh993450', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'81079201', N'Ui544018', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'81137910', N'Ui666655', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'81143721', N'Ui745364', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'81261211', N'Ui959518', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'81504523', N'Uj226354', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'81507764', N'Uj439351', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'81566828', N'Uk253455', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'81591247', N'Uk392359', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'81638633', N'Uk715876', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'81718452', N'Ul154777', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'81722244', N'Ul399246', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'81745501', N'Ul519368', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'81840197', N'Ul535555', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'81858285', N'Ul791554', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'81913061', N'Ul852136', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'81986891', N'Um360682', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'82035710', N'Um502155', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'82063694', N'Um610462', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'82154194', N'Un235686', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'82177999', N'Un569911', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'82248206', N'Uo780346', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'82307231', N'Uo863682', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'82364313', N'Up454339', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'82367098', N'Up584123', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'82402041', N'Up921638', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'82507157', N'Up960828', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'82520573', N'Uq438445', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'82672303', N'Uq567823', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'82682154', N'Uq674025', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'82712485', N'Uq725722', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'82770716', N'Uq797350', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83022262', N'Uq876187', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83154590', N'Us730620', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83164725', N'Ut555694', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83190306', N'Ut681610', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83194620', N'Ut763055', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83232290', N'Uu722535', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83243794', N'Uu784575', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83381281', N'Uu852096', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83407145', N'Uv299812', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83447867', N'Uv331346', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83451603', N'Uw322458', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83493390', N'Uw342142', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83506910', N'Uw431848', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83571260', N'Uw659060', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83582258', N'Ux604406', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83610566', N'Uy446309', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83762168', N'Uy624625', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83805993', N'Uy714061', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83808068', N'Uz231240', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83954106', N'Va635278', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83963162', N'Va902811', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83965639', N'Vb601973', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83971424', N'Vc328692', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'83974217', N'Vc844650', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84039309', N'Vc912811', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84094429', N'Vd432713', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84098862', N'Vd780251', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84117220', N'Vd834497', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84162940', N'Ve743269', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84170355', N'Ve804959', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84195352', N'Ve877060', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84201032', N'Vf342170', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84213818', N'Vf655500', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84251407', N'Vf741386', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84335981', N'Vg152609', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84395595', N'Vg184027', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84504173', N'Vg411335', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84582791', N'Vg834192', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84595161', N'Vh551678', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84621003', N'Vi144257', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84664690', N'Vj325398', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84689812', N'Vj848330', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84710427', N'Vk410772', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84760667', N'Vk461119', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84782653', N'Vk475143', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84787650', N'Vk661491', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84832297', N'Vl121010', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84937463', N'Vl250530', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84964121', N'Vl786100', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84969885', N'Vm479780', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'84987334', N'Vm613693', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'85101860', N'Vm738241', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'85144745', N'Vm768334', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'85162340', N'Vm768839', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'85177274', N'Vn747899', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'85230460', N'Vo595746', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'85239955', N'Vo828887', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'85421585', N'Vp230848', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'85465331', N'Vp545043', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'85614691', N'Vq369534', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'85647256', N'Vq433253', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'85648020', N'Vr203018', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'85666093', N'Vr480876', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'85671166', N'Vr585017', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'85674008', N'Vr924190', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'85712735', N'Vs134697', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'85763524', N'Vs283430', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'85810628', N'Vs331446', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'85825794', N'Vs783418', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'85850105', N'Vs801222', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'85854112', N'Vu285438', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'85973568', N'Vu337525', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'86061184', N'Vu719108', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'86062712', N'Vu733751', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'86196902', N'Vv716168', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'86209563', N'Vv883772', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'86222577', N'Vw165045', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'86240644', N'Vw476090', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'86375342', N'Vw897401', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'86397961', N'Vx157672', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'86468392', N'Vx351260', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'86475091', N'Vx966524', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'86483242', N'Vy424750', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'86518320', N'Vy585313', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'86537777', N'Vy873492', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'86611305', N'Vz367117', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'86614265', N'Vz638439', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'86658237', N'Wa616267', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'86727813', N'Wa786548', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'86756112', N'Wb378734', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'86831054', N'Wb951699', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'86870006', N'Wc533339', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'86914990', N'Wd198295', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87002653', N'Wd493695', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87100668', N'Wd566379', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87150141', N'Wd679453', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87317539', N'Wd778147', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87332641', N'Wd916714', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87337608', N'We510362', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87341474', N'Wf368591', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87372241', N'Wf628429', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87404854', N'Wf787344', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87453112', N'Wg724162', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87466372', N'Wh202420', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87471034', N'Wh234992', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87493858', N'Wh567691', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87524138', N'Wh945256', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87550335', N'Wi114052', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87576887', N'Wi130387', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87584318', N'Wi180329', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87588120', N'Wi689822', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87613076', N'Wj553582', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87698261', N'Wj574382', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87704124', N'Wj636055', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87764335', N'Wj737830', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87880345', N'Wl412136', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87908952', N'Wl448148', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'87930025', N'Wl661509', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88026736', N'Wl810673', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88085815', N'Wl927977', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88118788', N'Wm204935', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88134926', N'Wm459010', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88231914', N'Wm984022', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88282331', N'Wn465546', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88317211', N'Wn863022', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88319255', N'Wo280506', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88344640', N'Wo389384', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88351428', N'Wo693258', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88395898', N'Wp141246', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88451211', N'Wp521989', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88461196', N'Wp744263', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88461823', N'Wq853090', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88486127', N'Wr147586', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88575439', N'Wr320960', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88587914', N'Wr321562', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88656488', N'Wr659409', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88671414', N'Wr858032', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88688470', N'Wr876778', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88801671', N'Wr888731', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88824977', N'Ws362904', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88829240', N'Ws455997', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88877926', N'Ws534336', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88904685', N'Ws718487', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88946744', N'Ws849334', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'88959791', N'Ws912097', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'89017868', N'Ws919491', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'89021767', N'Ws944434', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'89085669', N'Wu269972', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'89133474', N'Wu334510', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'89273373', N'Wu368924', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'89328207', N'Wv118443', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'89506418', N'Wv431281', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'89624979', N'Ww300948', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'89670981', N'Ww755152', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'89757939', N'Ww886720', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'89760026', N'Ww948520', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'89783123', N'Wx310541', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'89838843', N'Wx343326', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'89848609', N'Wy235345', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'89902132', N'Wy413379', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'89909463', N'Wy494330', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90069847', N'Wy831625', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90139038', N'Wy971076', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90170715', N'Wz259169', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90175492', N'Wz476223', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90191404', N'Wz557423', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90195800', N'Wz558500', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90208553', N'Wz734757', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90249577', N'Xa188228', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90268904', N'Xb313198', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90273930', N'Xb390378', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90306167', N'Xc516967', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90359339', N'Xc788151', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90390059', N'Xd106160', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90449563', N'Xd730759', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90476471', N'Xe546932', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90512876', N'Xe578456', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90554981', N'Xe957781', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90566503', N'Xe989985', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90590963', N'Xf360264', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90736147', N'Xf924878', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90744081', N'Xf929957', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90792150', N'Xg820766', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90812590', N'Xg974131', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90833305', N'Xg988563', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90855194', N'Xh234163', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90888336', N'Xh390190', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'90906493', N'Xh916490', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'91002744', N'Xi133881', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'91009836', N'Xi311574', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'91143427', N'Xi594897', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'91250371', N'Xi970799', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'91321095', N'Xj658753', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'91337040', N'Xj723279', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'91378022', N'Xj836848', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'91415782', N'Xl856446', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'91463221', N'Xm496012', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'91468499', N'Xm591973', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'91538000', N'Xn289058', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'91600733', N'Xo443923', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'91651158', N'Xo494834', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'91660341', N'Xo835251', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'91705953', N'Xp928156', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'91750813', N'Xq164614', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'91800290', N'Xq243029', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'91845677', N'Xq557042', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'91855158', N'Xq720001', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'91886829', N'Xq790608', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92267427', N'Xr951631', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92323332', N'Xs613356', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92332430', N'Xs855168', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92333954', N'Xs901603', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92337520', N'Xt158681', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92392552', N'Xt911706', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92435133', N'Xu153503', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92458983', N'Xu638606', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92514617', N'Xu971700', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92553884', N'Xu988930', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92560098', N'Xv152423', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92603407', N'Xv186889', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92628901', N'Xv220121', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92676937', N'Xv521146', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92697582', N'Xv576203', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92757866', N'Xw368202', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92800045', N'Xw388140', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92835218', N'Xw817093', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92874516', N'Xw838077', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92897920', N'Xx467885', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92925630', N'Xx571605', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92933520', N'Xy807249', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'92974481', N'Xy812201', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93035706', N'Xy873672', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93039106', N'Xy907791', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93077099', N'Xz116873', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93092573', N'Xz554230', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93107316', N'Xz976086', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93117944', N'Ya416682', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93270929', N'Ya496464', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93297895', N'Ya536085', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93297938', N'Ya647648', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93332931', N'Ya994137', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93392718', N'Yb388210', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93394503', N'Yc823874', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93405323', N'Yc866466', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93414036', N'Yd222391', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93418057', N'Yd371832', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93421750', N'Ye208737', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93422759', N'Ye788834', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93463090', N'Yf123168', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93474732', N'Yf309854', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93578103', N'Yf398077', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93586712', N'Yf662481', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93743157', N'Yf951039', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93771270', N'Yf987353', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93797703', N'Yg399793', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93822032', N'Yg550511', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93832429', N'Yg922750', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93833191', N'Yh868917', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93854956', N'Yi128764', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93865202', N'Yi302188', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93872861', N'Yi643421', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93937418', N'Yi773310', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'93992469', N'Yj273978', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'94071402', N'Yj577432', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'94072752', N'Yj784238', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'94119114', N'Yj880215', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'94224702', N'Yk637353', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'94311611', N'Yk884197', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'94325309', N'Ym182574', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'94386885', N'Ym184030', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'94395812', N'Ym685663', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'94424898', N'Ym856220', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'94599423', N'Yn979473', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'94688409', N'Yo640278', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'94702734', N'Yp211569', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'94764900', N'Yp623172', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'94780203', N'Yq568868', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'94894214', N'Yq653635', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'94927973', N'Yr177861', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'94931796', N'Yr270593', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'94956541', N'Yr625325', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'94988530', N'Yr683413', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'95095603', N'Yr845863', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'95129974', N'Yr934922', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'95133492', N'Ys787837', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'95184418', N'Ys816743', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'95251050', N'Ys920066', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'95275673', N'Ys960263', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'95298152', N'Yt168026', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'95300445', N'Yt205497', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'95304398', N'Yt254762', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'95456307', N'Yt531204', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'95545900', N'Yv153859', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'95642282', N'Yv455721', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'95722828', N'Yv688656', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'95764464', N'Yw602256', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'95921016', N'Yw904127', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'95930330', N'Yx189771', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'95956493', N'Yx891837', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'95974150', N'Yy846524', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'96019785', N'Yz143597', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'96168584', N'Yz426074', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'96192435', N'Yz989647', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'96227597', N'Za656229', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'96248792', N'Za861735', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'96311083', N'Za931725', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'96322437', N'Zb111291', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'96327470', N'Zb226096', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'96335513', N'Zb354127', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'96492663', N'Zb995540', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'96531394', N'Zc561592', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'96631690', N'Zc724969', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'96666570', N'Zc745670', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'96799994', N'Zd358436', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'96818978', N'Zd559316', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'96844478', N'Zd603896', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'96851297', N'Ze290677', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'96869424', N'Ze916570', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'96935868', N'Zg194166', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'96941527', N'Zg614500', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'96974797', N'Zh514758', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97026559', N'Zi143603', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97052927', N'Zi304878', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97106437', N'Zi587354', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97148431', N'Zi827759', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97148541', N'Zj506433', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97187178', N'Zj614362', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97248938', N'Zj791470', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97284447', N'Zk182104', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97343431', N'Zk230413', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97356006', N'Zl650427', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97491940', N'Zl954467', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97508427', N'Zm248632', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97527452', N'Zm362341', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97565523', N'Zm395569', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97587472', N'Zm706747', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97622529', N'Zm954070', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97630229', N'Zn260949', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97657911', N'Zn328534', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97726038', N'Zn743351', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97801610', N'Zn965208', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97858547', N'Zo209073', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97915639', N'Zo319910', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97925822', N'Zo517797', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97956268', N'Zo850119', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'97989475', N'Zp372415', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'98016981', N'Zp406603', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'98157267', N'Zp487097', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'98166556', N'Zp923997', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'98187274', N'Zq217876', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'98333298', N'Zq301480', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'98334942', N'Zq351554', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'98375733', N'Zq701844', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'98376919', N'Zr141742', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'98406101', N'Zr404762', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'98430682', N'Zr535252', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'98468132', N'Zr581938', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'98544415', N'Zs106579', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'98567084', N'Zs430425', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'98601026', N'Zs476194', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'98618898', N'Zs920415', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'98630692', N'Zt234627', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'98700151', N'Zt594192', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'98784754', N'Zu399725', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'98828784', N'Zu549393', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'98849191', N'Zu640494', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'98924118', N'Zu747108', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'99036873', N'Zu948820', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'99101932', N'Zv812941', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'99187874', N'Zv846149', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'99226226', N'Zv855760', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'99265843', N'Zv955823', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'99440922', N'Zv976350', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'99451950', N'Zw121135', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'99465306', N'Zw170463', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'99501631', N'Zx945404', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'99535479', N'Zy907790', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'99551988', N'Zz219033', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'99558718', N'Zz284487', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'99610166', N'Zz431003', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'99639303', N'Zz853812', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+INSERT INTO [dbo].[AntiCodeInfo]  VALUES (N'99870147', N'Zz997661', N'2', N'0', N'0', N'1900-01-01 00:00:00.000', N'0')
+GO
+
+
+-- ----------------------------
+-- Primary Key structure for table AntiCodeInfo
+-- ----------------------------
+ALTER TABLE [dbo].[AntiCodeInfo] ADD CONSTRAINT [PK_AntiCodeInfo] PRIMARY KEY CLUSTERED ([AntiCode])
+WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)  
+ON [PRIMARY]
+GO
+

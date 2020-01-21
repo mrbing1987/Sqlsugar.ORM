@@ -51,6 +51,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Readme\数据库连接工具\Navicat.zip" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sqlsugar.ORM\Sqlsugar.ORM.csproj">
@@ -58,5 +59,12 @@
       <Name>Sqlsugar.ORM</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Readme\测试用数据库结构\AntiCodeInfo%28仅结构%29.sql" />
+    <Content Include="Readme\测试用数据库结构\AntiCodeInfo%28结构+数据%29.sql" />
+    <Content Include="Readme\测试用数据库结构\数据库结构.png" />
+    <Content Include="Readme\测试用数据库结构\数据表结构.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
