@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sqlsugar.ORM", "Sqlsugar.ORM\Sqlsugar.ORM.csproj", "{391D672F-9EF9-4409-860B-7E7DF80835E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sqlsugar.ORM.Application", "Sqlsugar.ORM.Application\Sqlsugar.ORM.Application.csproj", "{7FB64655-1A74-48FA-8FC6-1DBF30199093}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{391D672F-9EF9-4409-860B-7E7DF80835E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{391D672F-9EF9-4409-860B-7E7DF80835E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{391D672F-9EF9-4409-860B-7E7DF80835E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FB64655-1A74-48FA-8FC6-1DBF30199093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FB64655-1A74-48FA-8FC6-1DBF30199093}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FB64655-1A74-48FA-8FC6-1DBF30199093}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FB64655-1A74-48FA-8FC6-1DBF30199093}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
